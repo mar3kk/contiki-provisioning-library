@@ -1,0 +1,5 @@
+*.hex
+*.mikro-e
+*.map
+*.a
+obj_mikro-e/**/*.*
