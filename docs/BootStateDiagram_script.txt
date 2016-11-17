@@ -1,0 +1,17 @@
+'This script can be processed into image on http://www.planttext.com/planttext'
+@startuml
+
+title Application life cycle with provision
+
+(*) -down-> "Check if configuration is present"
+
+"Check if configuration is present" -down->[Config found] "Wait for defined time"
+"Check if configuration is present" -down->[Config not found] "Provision process"
+"Wait for defined time"-down->[User pressed button] "Clear current configuration"
+"Wait for defined time"-down->[User done nothing] "Run application"
+"Clear current configuration" -left-> "Provision process"
+"Provision process" -down-> "Save new config"
+"Save new config" -down-> "Run application"
+"Run application" -down-> (*)
+
+@enduml
