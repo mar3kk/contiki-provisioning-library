@@ -1,6 +1,9 @@
 ![](http://static.creatordev.io/logo.png)
 # Provisioning library for Contiki based constrained devices
 
+Visit us at [forum.creatordev.io](http://forum.creatordev.io) for support and discussion
+
+
 This project provides a library which can be added to any application that requires constrained device provisioning. It's designed to deliver PSK and other configuration data needed to connect an [Awa client](https://github.com/FlowM2M/AwaLWM2M) to [Device Server](http://creatordev.io/). This repository also contains an example which demonstrates how provisioning might be added to your application.
 
 This library is part of bigger solution which includes components such as Ci40 scripts, daemon, mobile and web application. More info about whole solution can be found at [wiki](http://putProperLinkHere)
@@ -66,5 +69,9 @@ In this paragraph you will find the steps done by the provisioning library when 
     * config is not valid, one of the expected fields is blank.
     * problem with storing into filesystem (probably lack of memory, or exhaustion of write cycles).
 
-# FAQ
+## FAQ
 Nothing yet...
+
+## CONTRIBUTING
+
+If you have a contribution to make please follow the processes laid out in [contributor guide](CONTRIBUTING.md).
