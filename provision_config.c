@@ -34,6 +34,7 @@
  */
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "provision_config.h"
 #include "cfs/cfs-coffee.h"
 #include "core/dev/watchdog.h"
