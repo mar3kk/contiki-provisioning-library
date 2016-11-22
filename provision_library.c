@@ -257,7 +257,7 @@ PROCESS_THREAD(provisionProcessNoConfig, ev, data)
     if(ev == resolv_event_found) {
       uip_ipaddr_t* tmp;
       resolv_status_t status = resolv_lookup(PROVISION_DAEMON, &tmp);
-      
+
       if (status == RESOLV_STATUS_CACHED && tmp != NULL) {
         memcpy(&destAddr, tmp, sizeof(uip_ipaddr_t));
 #ifdef PROVISION_DEBUG
@@ -333,6 +333,7 @@ static char* strndup(uint8_t* src, int maxLen ) {
   memset(result, 0, len + 1);
   memcpy(result, src, len);
   result[len] = 0;
+  return result;
 }
 
 static void finalizeConfiguration() {
