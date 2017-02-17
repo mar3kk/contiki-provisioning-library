@@ -39,6 +39,7 @@
 #include "cfs/cfs-coffee.h"
 #include "core/dev/watchdog.h"
 #include "helpers.h"
+#include "provision_communication.h"
 
 #define CONFIG_FILE "PROV_CONFIG"
 
@@ -139,6 +140,9 @@ void provision_loadConfig() {
   readString(fileHandle, &_ProvisionConfiguration.defaultRouteUri);
   readString(fileHandle, &_ProvisionConfiguration.endpointName);
   readString(fileHandle, &_ProvisionConfiguration.dnsServer);
+
+  memset(_ProvisionConfiguration.identity + _ProvisionConfiguration.identitySize, 0, PROV_FIELD_SIZE_IDENTITY - _ProvisionConfiguration.identitySize);
+  memset(_ProvisionConfiguration.pskKey + _ProvisionConfiguration.pskKeySize, 0, PROV_FIELD_SIZE_IDENTITY - _ProvisionConfiguration.pskKeySize);
 
   cfs_close(fileHandle);
 }

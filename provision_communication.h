@@ -33,6 +33,7 @@
  * WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include <stdbool.h>
+#include "contiki-net.h"
 
 #ifndef __PROVISION_COMMUNICATION_H__
 #define __PROVISION_COMMUNICATION_H__
