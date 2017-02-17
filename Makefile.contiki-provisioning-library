@@ -1,0 +1,1 @@
+contiki-provisioning-library_src=provision_communication.c provision_config.c provision_crypto.c provision_library.c bigint.c diffie_hellman_keys_exchanger.c
